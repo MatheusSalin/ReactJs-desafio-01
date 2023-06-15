@@ -1,0 +1,155 @@
+.tasks {
+    display: grid;
+    margin-top: -3rem;
+}
+
+.form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: -2rem;
+    margin-block-end: 5rem;
+}
+
+.form Input {
+    width: 100%;
+    padding: 0.8rem;
+    background: var(--Gray-500);
+    border: 1px solid var(--Gray-700);
+    border-radius: 8px;
+
+
+    transition: border 0.2s;
+    color: var(--Gray-100);
+}
+
+.form Input:focus {
+    border: 1px solid var(--Purple-200);
+}
+
+.form button {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+    background: var(--Blue-200);
+    border-radius: 8px;
+    border: 0px;
+    gap: 0.2rem;
+    font-weight: bolder;
+    padding: 0.2rem;
+
+    color: var(--Gray-100);
+
+}
+
+
+.task {
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.score {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.count,
+.countCheck {
+    color: var(--Gray-100);
+}
+
+.score span {
+    padding: 0rem 0.5rem 0rem 0.5rem;
+    margin: 1rem;
+    background: var(--Gray-400);
+    border: 1px solid var(--Gray-300);
+    border-radius: 1rem;
+}
+
+.noTask {
+    width: 100%;
+    display: flex;
+    margin-top: 10rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--Gray-300);
+}
+
+.noTask strong {
+    font-weight: bold;
+}
+
+.taskBox button {
+    display: flex;
+    flex-direction: column;
+}
+
+.lineTask {
+    width: 72rem;
+    min-height: 7.2rem;
+    margin: 2rem 0rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+
+    background: var(--Gray-500);
+    border-radius: 1.2rem;
+}
+
+.checkbox {
+    display: inline;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+}
+
+.checkBox {
+    display: flex;
+    align-items: center;
+}
+
+.checkBox input {
+    display: none;
+}
+
+.checkBox input+span:before {
+    content: '';
+    width: 2rem;
+    height: 2rem;
+    border-radius: 2rem;
+    background-color: transparent;
+    border: 2px solid var(--Blue-200);
+    display: inline-block;
+}
+
+.checkBox input:checked+span:before {
+    background: url('../assets/Vector.svg') center/80% no-repeat;
+    align-items: center;
+    justify-content: center;
+    color: var(--Gray-100);
+    background-color: var(--Purple-200);
+    border-color: var(--Purple-200);
+}
+
+.checkBox p {
+    text-align: start;
+    margin-left: 1rem;
+    color: var(--Gray-100);
+}
+
+
+.content input:checked~p {
+    text-decoration: line-through;
+}
